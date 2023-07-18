@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="PainelGestorStock" minWidth="-Infinity" prefHeight="551.0" prefWidth="721.0" style="-fx-background-color: #2a1b3d;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.StockController">
+   <children>
+      <Pane layoutX="-3.0" layoutY="1.0" prefHeight="78.0" prefWidth="727.0" style="-fx-background-color: #c1c8e4;">
+         <children>
+            <Label fx:id="lblData11" alignment="CENTER" layoutY="23.0" prefHeight="45.0" prefWidth="727.0" text="Gestão de Stock" textFill="WHITE">
+               <font>
+                  <Font name="Bernard MT Condensed" size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Separator layoutX="-7.0" layoutY="82.0" orientation="VERTICAL" prefHeight="468.0" prefWidth="19.0" />
+      <Separator layoutY="548.0" prefHeight="3.0" prefWidth="721.0" />
+      <Separator layoutX="713.0" layoutY="79.0" orientation="VERTICAL" prefHeight="468.0" prefWidth="19.0" />
+      <Separator layoutX="-184.0" layoutY="79.0" prefHeight="3.0" prefWidth="905.0" />
+      <ImageView fx:id="imgGestorStock" fitHeight="45.0" fitWidth="68.0" layoutX="71.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/gestaoStock.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblSamos" layoutX="341.0" layoutY="111.0" prefHeight="39.0" prefWidth="146.0" text="SAMOS" textFill="#e7ff0d">
+         <font>
+            <Font name="Old English Text MT" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblHotel" layoutX="288.0" layoutY="81.0" prefHeight="26.0" prefWidth="126.0" text="HOTEL" textFill="#b315c2">
+         <font>
+            <Font name="Modern No. 20" size="33.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblData1" layoutX="136.0" layoutY="140.0" prefHeight="45.0" prefWidth="238.0" text="Stock" textFill="WHITE">
+         <font>
+            <Font name="Bernard MT Condensed" size="31.0" />
+         </font>
+      </Label>
+      <Button fx:id="gestaoProdBtn" alignment="CENTER_RIGHT" layoutX="374.0" layoutY="452.0" mnemonicParsing="false" onAction="#clickgestaoProdBtn" prefHeight="57.0" prefWidth="154.0" style="-fx-background-color: #111111; -fx-border-color: #ffffff;" text="       Gestão Produtos" textFill="#dfc6ff">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="imgGestorEntradaStock1" fitHeight="42.0" fitWidth="68.0" layoutX="374.0" layoutY="460.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/gestaoProdutos.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnVoltar" layoutX="39.0" layoutY="452.0" mnemonicParsing="false" onAction="#clickBtnVoltar" prefHeight="57.0" prefWidth="146.0" style="-fx-background-color: #111111; -fx-border-color: #ffffff;" text="Voltar" textFill="#dfc6ff">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tblStock" layoutX="87.0" layoutY="192.0" onMouseClicked="#clickTable" prefHeight="200.0" prefWidth="557.0">
+         <columns>
+            <TableColumn fx:id="idProdutoTable" prefWidth="237.6000518798828" text="Id do produto" />
+            <TableColumn fx:id="quantidadeTable" prefWidth="298.39996337890625" text="Quantidade" />
+         </columns>
+      </TableView>
+      <Text fill="WHITE" layoutX="87.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descrição:">
+         <font>
+            <Font name="Bernard MT Condensed" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="descricaoTxt" fill="WHITE" layoutX="88.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="544.13671875">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="imgGestorGestaoProduto" fitHeight="36.0" fitWidth="39.0" layoutX="53.0" layoutY="463.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/voltar.jpeg" />
+         </image>
+      </ImageView>
+      <Button fx:id="GEntradaStock" alignment="CENTER_RIGHT" layoutX="205.0" layoutY="452.0" mnemonicParsing="false" onAction="#GEntradaStockClick" prefHeight="57.0" prefWidth="154.0" style="-fx-background-color: #111111; -fx-border-color: #ffffff;" text="Entrada de Stock" textFill="#dfc6ff">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="imgGestorStock1" fitHeight="36.0" fitWidth="60.0" layoutX="195.0" layoutY="463.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/gestaoStock.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="precoProdBtn" alignment="CENTER_RIGHT" layoutX="545.0" layoutY="452.0" mnemonicParsing="false" onAction="#clickPrecoProdBtn" prefHeight="57.0" prefWidth="154.0" style="-fx-background-color: #111111; -fx-border-color: #ffffff;" text="       Preços Produtos" textFill="#dfc6ff">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="imgGestorEntradaStock11" fitHeight="36.0" fitWidth="29.0" layoutX="553.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/icons8-expensive-price-40.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

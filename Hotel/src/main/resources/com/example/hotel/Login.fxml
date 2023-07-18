@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="PainelGestorStock" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="356.0" style="-fx-background-color: #2a1b3d;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
+   <children>
+      <Separator layoutX="-7.0" layoutY="1.0" orientation="VERTICAL" prefHeight="455.0" prefWidth="20.0" />
+      <Separator layoutY="450.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="8.0" prefWidth="356.0" />
+      <Separator layoutX="354.0" layoutY="-2.0" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="455.0" prefWidth="3.0" />
+      <Separator layoutX="3.0" layoutY="-8.0" prefHeight="21.0" prefWidth="356.0" />
+      <ImageView fx:id="imgGestorStock" fitHeight="45.0" fitWidth="68.0" layoutX="50.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/padlock.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblSamos" layoutX="191.0" layoutY="50.0" prefHeight="39.0" prefWidth="146.0" text="SAMOS" textFill="#e7ff0d">
+         <font>
+            <Font name="Old English Text MT" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblHotel" alignment="CENTER" layoutX="1.0" layoutY="14.0" prefHeight="36.0" prefWidth="356.0" text="HOTEL" textFill="#b315c2">
+         <font>
+            <Font name="Modern No. 20" size="33.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblData1" alignment="CENTER" layoutX="1.0" layoutY="120.0" prefHeight="45.0" prefWidth="356.0" text="Bem-vindo!" textFill="WHITE">
+         <font>
+            <Font name="Bernard MT Condensed" size="31.0" />
+         </font>
+      </Label>
+      <Button fx:id="loginBtn" defaultButton="true" layoutX="105.0" layoutY="333.0" mnemonicParsing="false" onAction="#clickLoginBtn" prefHeight="45.0" prefWidth="146.0" style="-fx-background-color: #111111; -fx-border-color: #ffffff;" text="Login" textFill="#dfc6ff">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="imgGestorEntradaStock1" fitHeight="42.0" fitWidth="68.0" layoutX="50.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/user%20(1).png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="userTxt" layoutX="102.0" layoutY="192.0" prefHeight="25.0" prefWidth="178.0" promptText="Utilizador">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <PasswordField fx:id="passwordTxt" layoutX="104.0" layoutY="267.0" prefHeight="25.0" prefWidth="178.0" promptText="Password">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </PasswordField>
+   </children>
+</AnchorPane>

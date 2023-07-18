@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="PainelGestorCliente" minWidth="-Infinity" prefHeight="551.0" prefWidth="721.0" style="-fx-background-color: #2a1b3d;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GestaoReservasController">
+   <children>
+      <Pane layoutX="-3.0" layoutY="1.0" prefHeight="78.0" prefWidth="727.0" style="-fx-background-color: #c1c8e4;">
+         <children>
+            <Label fx:id="lblGestaoReserva" alignment="CENTER" layoutX="13.0" layoutY="18.0" prefHeight="45.0" prefWidth="721.0" text="Gestão de Reservas" textFill="WHITE">
+               <font>
+                  <Font name="Bernard MT Condensed" size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Separator layoutX="-7.0" layoutY="82.0" orientation="VERTICAL" prefHeight="468.0" prefWidth="19.0" />
+      <Separator layoutY="548.0" prefHeight="3.0" prefWidth="721.0" />
+      <Separator layoutX="713.0" layoutY="79.0" orientation="VERTICAL" prefHeight="468.0" prefWidth="19.0" />
+      <Separator layoutX="-184.0" layoutY="79.0" prefHeight="3.0" prefWidth="905.0" />
+      <Label fx:id="lblSamos" layoutX="341.0" layoutY="111.0" prefHeight="39.0" prefWidth="146.0" text="SAMOS" textFill="#e7ff0d">
+         <font>
+            <Font name="Old English Text MT" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblHotel" layoutX="288.0" layoutY="81.0" prefHeight="26.0" prefWidth="126.0" text="HOTEL" textFill="#b315c2">
+         <font>
+            <Font name="Modern No. 20" size="33.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblReservas" layoutX="26.0" layoutY="198.0" prefHeight="206.0" prefWidth="665.0" style="-fx-border-color: #000000; -fx-background-color: #c1c8e4;">
+         <columns>
+            <TableColumn fx:id="tblColDReserva" prefWidth="75.0" text="ID Reserva" />
+            <TableColumn fx:id="tblCoIDCliente" prefWidth="75.0" text="ID Cliente" />
+            <TableColumn fx:id="tblCoIDQuarto" prefWidth="75.0" text="ID Quarto" />
+            <TableColumn fx:id="tblColDataIni" prefWidth="75.0" text="Data Inicial" />
+            <TableColumn fx:id="tblColDataFim" prefWidth="75.0" text="Data Final" />
+            <TableColumn fx:id="tblCoPreco" prefWidth="75.0" text="Preço" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button fx:id="eliminarReservaBtn" alignment="CENTER_RIGHT" layoutX="397.0" layoutY="416.0" mnemonicParsing="false" onAction="#clickEliminarReservaBtn" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: #111111; -fx-border-color: #ffffff;" text="  Eliminar" textFill="#dfc6ff">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="imgGestorEliminarProduto" fitHeight="36.0" fitWidth="30.0" layoutX="404.0" layoutY="422.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/eliminar.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="adicionarReservaBtn" alignment="CENTER_RIGHT" layoutX="534.0" layoutY="416.0" mnemonicParsing="false" onAction="#clickAdicionarReservaBtn" prefHeight="45.0" prefWidth="139.0" style="-fx-background-color: #111111; -fx-border-color: #ffffff;" text="    Criar Reserva" textFill="#dfc6ff">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="imgGestorGestaoReserva" fitHeight="45.0" fitWidth="68.0" layoutX="26.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/gestaoReservas.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgGestorEntradaStock2" fitHeight="30.0" fitWidth="30.0" layoutX="547.0" layoutY="422.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/create.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnVoltar" layoutX="40.0" layoutY="417.0" mnemonicParsing="false" onAction="#clickBtnVoltar" prefHeight="45.0" prefWidth="139.0" style="-fx-background-color: #111111; -fx-border-color: #ffffff;" text="Voltar" textFill="#dfc6ff">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblGestaoReserva1" layoutX="79.0" layoutY="148.0" prefHeight="45.0" prefWidth="186.0" text="Reservas" textFill="WHITE">
+         <font>
+            <Font name="Bernard MT Condensed" size="31.0" />
+         </font>
+      </Label>
+      <Button fx:id="ServicoReserva" alignment="CENTER_RIGHT" layoutX="202.0" layoutY="417.0" mnemonicParsing="false" onAction="#ServicoReservaClick" prefHeight="45.0" prefWidth="173.0" style="-fx-background-color: #111111; -fx-border-color: #ffffff;" text="Adicionar Serviços" textFill="#dfc6ff">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="imgGestorEntradaStock21" fitHeight="30.0" fitWidth="30.0" layoutX="48.0" layoutY="422.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/voltar.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgGestorEntradaStock22" fitHeight="30.0" fitWidth="45.0" layoutX="205.0" layoutY="423.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/gestaoServicos.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cbEstadoReserva" layoutX="541.0" layoutY="159.0" prefWidth="150.0" />
+      <Button fx:id="ProdutoQuarto" alignment="CENTER_RIGHT" layoutX="202.0" layoutY="475.0" mnemonicParsing="false" onAction="#RedirectProdutoQuarto" prefHeight="45.0" prefWidth="173.0" style="-fx-background-color: #111111; -fx-border-color: #ffffff;" text="        Adicionar Produtos" textFill="#dfc6ff">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="imgGestorEntradaStock221" fitHeight="30.0" fitWidth="45.0" layoutX="213.0" layoutY="483.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/box.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="cancelarReservaBtn" alignment="CENTER_RIGHT" layoutX="397.0" layoutY="475.0" mnemonicParsing="false" onAction="#clickCancelar" prefHeight="45.0" prefWidth="110.0" style="-fx-background-color: #111111; -fx-border-color: #ffffff;" text="  Cancelar" textFill="#dfc6ff">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="imgGestorEliminarProduto1" fitHeight="36.0" fitWidth="30.0" layoutX="404.0" layoutY="483.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/forbidden.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="SearchClienteTxtField" layoutX="324.0" layoutY="159.0" onAction="#SearchClienteTxtFieldAction" prefHeight="25.0" prefWidth="203.0" />
+      <Label layoutX="263.0" layoutY="159.0" text="Cliente:" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

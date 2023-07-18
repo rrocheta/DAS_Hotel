@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="PainelGestorProduto" minWidth="-Infinity" prefHeight="551.0" prefWidth="721.0" style="-fx-background-color: #2a1b3d;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PrecosProdutosClienteController">
+   <children>
+      <Pane layoutX="-3.0" layoutY="1.0" prefHeight="78.0" prefWidth="727.0" style="-fx-background-color: #c1c8e4;">
+         <children>
+            <Label fx:id="lblGestaoProdutos1" alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="16.0" prefHeight="45.0" prefWidth="721.0" text="Preços de Produtos" textFill="WHITE">
+               <font>
+                  <Font name="Bernard MT Condensed" size="31.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Separator layoutX="-7.0" layoutY="82.0" orientation="VERTICAL" prefHeight="468.0" prefWidth="19.0" />
+      <Separator layoutY="548.0" prefHeight="3.0" prefWidth="721.0" />
+      <Separator layoutX="713.0" layoutY="79.0" orientation="VERTICAL" prefHeight="468.0" prefWidth="19.0" />
+      <Separator layoutX="-184.0" layoutY="79.0" prefHeight="3.0" prefWidth="905.0" />
+      <Label fx:id="lblSamos" layoutX="341.0" layoutY="111.0" prefHeight="39.0" prefWidth="146.0" text="SAMOS" textFill="#e7ff0d">
+         <font>
+            <Font name="Old English Text MT" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblHotel" layoutX="288.0" layoutY="81.0" prefHeight="26.0" prefWidth="126.0" text="HOTEL" textFill="#b315c2">
+         <font>
+            <Font name="Modern No. 20" size="33.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblGestaoProdutos" layoutX="71.0" layoutY="149.0" prefHeight="45.0" prefWidth="136.0" text="Produtos - " textFill="WHITE">
+         <font>
+            <Font name="Bernard MT Condensed" size="31.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnVoltar" layoutX="31.0" layoutY="455.0" mnemonicParsing="false" onAction="#clickBtnVoltar" prefHeight="69.0" prefWidth="181.0" style="-fx-background-color: #111111; -fx-border-color: #ffffff;" text="  Voltar" textFill="#dfc6ff">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="imgGestorGestaoProduto" fitHeight="45.0" fitWidth="68.0" layoutX="17.0" layoutY="149.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/icons8-expensive-price-40.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="produtosTable" layoutX="14.0" layoutY="194.0" onMouseClicked="#clickTable" prefHeight="214.0" prefWidth="696.0">
+        <columns>
+          <TableColumn fx:id="idTable" prefWidth="131.0" text="ID Produto" />
+          <TableColumn fx:id="descricaoTable" prefWidth="286.0" text="Descrição" />
+            <TableColumn fx:id="precoTable" prefWidth="136.0" text="Preço Unidade (€)" />
+            <TableColumn fx:id="precoClienteTable" prefWidth="142.0" text="Preço para Cliente (€)" />
+        </columns>
+      </TableView>
+      <Text fx:id="quantidade" fill="WHITE" layoutX="113.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0">
+         <font>
+            <Font name="Bernard MT Condensed" size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="atualizaPreco" alignment="CENTER_RIGHT" layoutX="513.0" layoutY="455.0" mnemonicParsing="false" onAction="#atualizaPrecoClick" prefHeight="69.0" prefWidth="181.0" style="-fx-background-color: #111111; -fx-border-color: #ffffff;" text="  Atualizar preço" textFill="#dfc6ff">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="imgGestorGestaoProduto1" fitHeight="45.0" fitWidth="68.0" layoutX="530.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/checked.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="quantidadeTxt" layoutX="280.0" layoutY="456.0" prefHeight="25.0" prefWidth="146.0" promptText="Novo preço" />
+      <Label fx:id="lblGestaoProdutos2" layoutX="283.0" layoutY="412.0" prefHeight="45.0" prefWidth="156.0" text="Atualizar preço:" textFill="WHITE">
+         <font>
+            <Font name="Bernard MT Condensed" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblGestaoProdutos3" layoutX="201.0" layoutY="149.0" prefHeight="45.0" prefWidth="280.0" text="Alterar preços para Clientes" textFill="WHITE">
+         <font>
+            <Font name="Bernard MT Condensed" size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
